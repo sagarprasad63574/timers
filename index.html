@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //countdown function that accepts a number as a parameter 
+        //and every 1000 milliseconds decrements the value and console.logs it.
+
+        function countDown (num) {
+            let count = setInterval(function (){   
+                num--;              
+                if (num <= 0) {
+                    clearInterval(count); 
+                    console.log("DONE!"); 
+                }
+                else {
+                    console.log(num); 
+                }
+            }, 1000);
+        }
+        countDown(4);
+
+        // function randomGame() {
+        //     let counter = 0;
+        //     let t = setInterval(function () {
+        //         let ran = Math.random();
+        //         if (ran > 0.75) {
+        //             clearInterval(t);
+        //             console.log(`It took ${counter} tries`); 
+        //         }
+        //         else {
+        //             counter++;
+        //         }
+        //     }, 1000)
+        // }
+        // randomGame();
+    </script>
+</body>
+</html>
