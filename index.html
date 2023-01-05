@@ -25,20 +25,23 @@
         }
         countDown(4);
 
-        // function randomGame() {
-        //     let counter = 0;
-        //     let t = setInterval(function () {
-        //         let ran = Math.random();
-        //         if (ran > 0.75) {
-        //             clearInterval(t);
-        //             console.log(`It took ${counter} tries`); 
-        //         }
-        //         else {
-        //             counter++;
-        //         }
-        //     }, 1000)
-        // }
-        // randomGame();
+        //A Function called randomGame that selects a random number between 0 and 1 every 1000 milliseconds 
+        //and a counter that keep track until the random number generates a number that is greater then 0.75.
+
+        function randomGame() {
+            let counter = 0;
+            let t = setInterval(function () {
+                let ran = Math.random();
+                if (ran > 0.75) {
+                    clearInterval(t);
+                    console.log(`It took ${counter} tries`); 
+                }
+                else {
+                    counter++;
+                }
+            }, 1000)
+        }
+        randomGame();
     </script>
 </body>
 </html>
